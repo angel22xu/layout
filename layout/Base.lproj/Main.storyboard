@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQ5-B7-pLi">
+                                <rect key="frame" x="40" y="20" width="250" height="302"/>
+                                <color key="backgroundColor" red="0.081969318544047987" green="0.76562499309407195" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFP-OF-se6">
+                                <rect key="frame" x="310" y="20" width="250" height="302"/>
+                                <color key="backgroundColor" red="1" green="0.33089873703134531" blue="0.47054648008616273" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slu-Ct-4J9">
+                                <rect key="frame" x="40" y="471" width="520" height="109"/>
+                                <color key="backgroundColor" red="0.87822010027102426" green="0.787193501621681" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohf-Dv-1UU">
+                                <rect key="frame" x="40" y="342" width="520" height="109"/>
+                                <color key="backgroundColor" red="0.36703303783738161" green="1" blue="0.43227875076221711" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PFP-OF-se6" firstAttribute="width" secondItem="oQ5-B7-pLi" secondAttribute="width" id="0YW-OH-6Dn"/>
+                            <constraint firstItem="slu-Ct-4J9" firstAttribute="top" secondItem="ohf-Dv-1UU" secondAttribute="bottom" constant="20" id="Ar2-3S-fhc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ohf-Dv-1UU" secondAttribute="trailing" constant="20" id="GNk-j3-5kl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="slu-Ct-4J9" secondAttribute="trailing" constant="20" id="HAx-ET-NCU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PFP-OF-se6" secondAttribute="trailing" constant="20" id="MXu-UP-OiX"/>
+                            <constraint firstItem="PFP-OF-se6" firstAttribute="leading" secondItem="oQ5-B7-pLi" secondAttribute="trailing" constant="20" id="QKZ-m0-EaP"/>
+                            <constraint firstItem="oQ5-B7-pLi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="Rwn-BE-RFv"/>
+                            <constraint firstItem="ohf-Dv-1UU" firstAttribute="top" secondItem="PFP-OF-se6" secondAttribute="bottom" constant="20" id="Sfh-XY-aYJ"/>
+                            <constraint firstItem="slu-Ct-4J9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="451" id="TJy-gs-rmI"/>
+                            <constraint firstItem="PFP-OF-se6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="WJg-BY-7hy"/>
+                            <constraint firstItem="slu-Ct-4J9" firstAttribute="top" secondItem="ohf-Dv-1UU" secondAttribute="bottom" constant="20" id="WWb-Mf-Hfp"/>
+                            <constraint firstItem="oQ5-B7-pLi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="ZcR-I9-qK2"/>
+                            <constraint firstItem="ohf-Dv-1UU" firstAttribute="top" secondItem="oQ5-B7-pLi" secondAttribute="bottom" constant="20" id="cI7-MN-03t"/>
+                            <constraint firstItem="slu-Ct-4J9" firstAttribute="height" secondItem="ohf-Dv-1UU" secondAttribute="height" id="fln-sI-usB"/>
+                            <constraint firstItem="slu-Ct-4J9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="jIt-5T-U0Y"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="slu-Ct-4J9" secondAttribute="bottom" constant="20" id="oQi-v5-LM9"/>
+                            <constraint firstItem="PFP-OF-se6" firstAttribute="height" secondItem="oQ5-B7-pLi" secondAttribute="height" id="qfq-Bs-InZ"/>
+                            <constraint firstItem="slu-Ct-4J9" firstAttribute="width" secondItem="ohf-Dv-1UU" secondAttribute="width" id="tIU-3V-acc"/>
+                            <constraint firstItem="ohf-Dv-1UU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="vMA-J4-5na"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomView" destination="slu-Ct-4J9" id="Lx6-mv-pHc"/>
+                        <outlet property="centerView" destination="ohf-Dv-1UU" id="tEO-g9-tTX"/>
+                        <outlet property="rightTopView" destination="PFP-OF-se6" id="Ev8-OO-0mq"/>
+                        <outlet property="topLeftView" destination="oQ5-B7-pLi" id="2Qo-n0-Grc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="226" y="339"/>
         </scene>
     </scenes>
 </document>

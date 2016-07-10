@@ -9,7 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var centerView: UIView!
+    @IBOutlet weak var rightTopView: UIView!
+    @IBOutlet weak var topLeftView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
